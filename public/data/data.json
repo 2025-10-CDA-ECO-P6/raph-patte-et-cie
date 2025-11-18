@@ -1,0 +1,276 @@
+{
+  "owners": [
+    {
+      "owner_id": 1,
+      "last_name": "Dupont",
+      "first_name": "Marie",
+      "phone": "06 12 34 56 78",
+      "email": "marie.dupont@email.fr",
+      "address": "12 rue des Lilas, 33000 Bordeaux"
+    },
+    {
+      "owner_id": 2,
+      "last_name": "Martin",
+      "first_name": "Jean",
+      "phone": "06 98 76 54 32",
+      "email": "jean.martin@email.fr",
+      "address": "45 avenue de la République, 33200 Bordeaux"
+    },
+    {
+      "owner_id": 3,
+      "last_name": "Lefebvre",
+      "first_name": "Sophie",
+      "phone": "07 11 22 33 44",
+      "email": "sophie.lefebvre@email.fr",
+      "address": "8 impasse du Soleil, 33300 Bordeaux"
+    }
+  ],
+  "veterinarians": [
+    {
+      "vet_id": 1,
+      "last_name": "Moreau",
+      "first_name": "Bernard",
+      "specialty": "Généraliste"
+    },
+    {
+      "vet_id": 2,
+      "last_name": "Dubois",
+      "first_name": "Françoise",
+      "specialty": "Chirurgie"
+    },
+    {
+      "vet_id": 3,
+      "last_name": "Rousseau",
+      "first_name": "Gérard",
+      "specialty": "Dermatologie"
+    }
+  ],
+  "animals": [
+    {
+      "animal_id": 1,
+      "name": "Milla",
+      "species": "Chien",
+      "breed": "Golden Retriever",
+      "birth_date": "2020-03-15",
+      "sex": "M",
+      "color": "Doré",
+      "chip_number": "250268500123456",
+      "weight": 28.5,
+      "owner_id": 1
+    },
+    {
+      "animal_id": 2,
+      "name": "Mimine",
+      "species": "Chat",
+      "breed": "Maine Coon",
+      "birth_date": "2019-07-22",
+      "sex": "M",
+      "color": "Tigré gris",
+      "chip_number": "250268500234567",
+      "weight": 7.2,
+      "owner_id": 1
+    },
+    {
+      "animal_id": 3,
+      "name": "Sora",
+      "species": "Chien",
+      "breed": "Bouledogue français",
+      "birth_date": "2021-11-03",
+      "sex": "M",
+      "color": "Fauve",
+      "chip_number": "250268500345678",
+      "weight": 12.8,
+      "owner_id": 2
+    },
+    {
+      "animal_id": 4,
+      "name": "Kiki",
+      "species": "Chat",
+      "breed": "Européen",
+      "birth_date": "2018-05-10",
+      "sex": "F",
+      "color": "Roux et blanc",
+      "chip_number": "250268500456789",
+      "weight": 4.5,
+      "owner_id": 3
+    },
+    {
+      "animal_id": 5,
+      "name": "Naruto",
+      "species": "Lapin",
+      "breed": "Nain angora",
+      "birth_date": "2022-01-20",
+      "sex": "F",
+      "color": "Blanc",
+      "chip_number": "250268500567890",
+      "weight": 1.8,
+      "owner_id": 3
+    }
+  ],
+  "visits": [
+    {
+      "visit_id": 1,
+      "visit_date": "2024-09-15T10:30:00",
+      "reason": "Vaccination annuelle",
+      "diagnosis": "Animal en bonne santé",
+      "observations": "Comportement normal. Poids stable. Vaccination effectuée sans problème.",
+      "visit_weight": 28.3,
+      "animal_id": 1,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 2,
+      "visit_date": "2024-10-02T14:15:00",
+      "reason": "Contrôle de routine",
+      "diagnosis": "Légère surcharge pondérale",
+      "observations": "Recommandation : réduire les friandises et augmenter l'activité physique.",
+      "visit_weight": 28.5,
+      "animal_id": 1,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 3,
+      "visit_date": "2024-08-20T09:00:00",
+      "reason": "Problème de peau",
+      "diagnosis": "Dermatite allergique",
+      "observations": "Prescription d'un traitement antihistaminique. Revoir dans 2 semaines.",
+      "visit_weight": 7.1,
+      "animal_id": 2,
+      "vet_id": 3
+    },
+    {
+      "visit_id": 4,
+      "visit_date": "2024-09-05T11:45:00",
+      "reason": "Suivi dermatite",
+      "diagnosis": "Amélioration notable",
+      "observations": "Peau en meilleure condition. Continuer le traitement encore 1 semaine.",
+      "visit_weight": 7.2,
+      "animal_id": 2,
+      "vet_id": 3
+    },
+    {
+      "visit_id": 5,
+      "visit_date": "2024-07-10T16:00:00",
+      "reason": "Problèmes respiratoires",
+      "diagnosis": "Syndrome brachycéphale",
+      "observations": "Typique de la race. Éviter les fortes chaleurs et l'exercice intense.",
+      "visit_weight": 12.5,
+      "animal_id": 3,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 6,
+      "visit_date": "2024-11-01T10:00:00",
+      "reason": "Vaccination + contrôle",
+      "diagnosis": "Bonne santé générale",
+      "observations": "Respiration stable. Poids correct pour la race.",
+      "visit_weight": 12.8,
+      "animal_id": 3,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 7,
+      "visit_date": "2024-06-12T13:30:00",
+      "reason": "Stérilisation",
+      "diagnosis": "Opération réussie",
+      "observations": "Chirurgie sans complications. Retrait des points dans 10 jours.",
+      "visit_weight": 4.6,
+      "animal_id": 4,
+      "vet_id": 2
+    },
+    {
+      "visit_id": 8,
+      "visit_date": "2024-10-20T15:00:00",
+      "reason": "Contrôle dentaire",
+      "diagnosis": "Légère gingivite",
+      "observations": "Détartrage recommandé dans les 6 mois. Brossage régulier conseillé.",
+      "visit_weight": 4.5,
+      "animal_id": 4,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 9,
+      "visit_date": "2024-11-05T09:30:00",
+      "reason": "Première visite",
+      "diagnosis": "Animal en bonne santé",
+      "observations": "Examen complet OK. Vaccination myxomatose effectuée.",
+      "visit_weight": 1.8,
+      "animal_id": 5,
+      "vet_id": 1
+    }
+  ],
+  "vaccines": [
+    {
+      "vaccine_id": 1,
+      "vaccine_name": "DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza)",
+      "injection_date": "2024-09-15",
+      "reminder_date": "2025-09-15",
+      "batch_number": "VAC2024-DH-089",
+      "animal_id": 1,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 2,
+      "vaccine_name": "Rage",
+      "injection_date": "2024-09-15",
+      "reminder_date": "2027-09-15",
+      "batch_number": "RAB2024-FR-156",
+      "animal_id": 1,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 3,
+      "vaccine_name": "Typhus + Coryza + Leucose",
+      "injection_date": "2024-08-20",
+      "reminder_date": "2025-08-20",
+      "batch_number": "FEL2024-TC-234",
+      "animal_id": 2,
+      "vet_id": 3
+    },
+    {
+      "vaccine_id": 4,
+      "vaccine_name": "DHPP",
+      "injection_date": "2024-11-01",
+      "reminder_date": "2025-11-01",
+      "batch_number": "VAC2024-DH-112",
+      "animal_id": 3,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 5,
+      "vaccine_name": "Toux du chenil",
+      "injection_date": "2024-11-01",
+      "reminder_date": "2025-11-01",
+      "batch_number": "KC2024-BOR-078",
+      "animal_id": 3,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 6,
+      "vaccine_name": "Typhus + Coryza",
+      "injection_date": "2024-06-12",
+      "reminder_date": "2025-06-12",
+      "batch_number": "FEL2024-TC-189",
+      "animal_id": 4,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 7,
+      "vaccine_name": "Myxomatose",
+      "injection_date": "2024-11-05",
+      "reminder_date": "2025-05-05",
+      "batch_number": "RAB2024-MX-045",
+      "animal_id": 5,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 8,
+      "vaccine_name": "VHD (Viral Hemorrhagic Disease)",
+      "injection_date": "2024-11-05",
+      "reminder_date": "2025-11-05",
+      "batch_number": "RAB2024-VH-067",
+      "animal_id": 5,
+      "vet_id": 1
+    }
+  ]
+}
