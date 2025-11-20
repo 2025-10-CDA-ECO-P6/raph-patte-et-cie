@@ -39,33 +39,33 @@ export async function getAnimalById(animalId) {
 }
 
 export function defineSpecies(specie) {
-  const speciesMap = {
-    "Chien": "🐕",
-    "Chat": "🐈",
-    "Lapin": "🐇",
-  };
+    if (specie == "Chien") return "🐕";
 
-  return speciesMap[specie] || "❓";
+    if (specie == "Chat") return "🐈";
+
+    if (specie == "Lapin") return "🐇";
+
+    return "❓";
 }
 
 
 export function calculateAge(birthDate) {
-  const birth = new Date(birthDate);
-  const today = new Date();
-  
-  let years = today.getFullYear() - birth.getFullYear();
-  let months = today.getMonth() - birth.getMonth();
-  
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-  
-  if (years === 0) {
-    return `${months} mois`;
-  } else if (months === 0) {
-    return `${years} an${years > 1 ? 's' : ''}`;
-  } else {
-    return `${years} an${years > 1 ? 's' : ''} et ${months} mois`;
-  }
+    const birth = new Date(birthDate);
+    const today = new Date();
+
+    let years = today.getFullYear() - birth.getFullYear();
+    let months = today.getMonth() - birth.getMonth();
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    if (years === 0) {
+        return `${months} mois`;
+    } else if (months === 0) {
+        return `${years} an${years > 1 ? 's' : ''}`;
+    } else {
+        return `${years} an${years > 1 ? 's' : ''} et ${months} mois`;
+    }
 }

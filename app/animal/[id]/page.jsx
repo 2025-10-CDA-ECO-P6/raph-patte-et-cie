@@ -11,8 +11,8 @@ export default async function AnimalDetail({ params }) {
 
     return (
         <div id="animal-detail" className="container">
-            <Link href={"/"} className="flex items-center gap-2">
-                Retourner sur la liste     
+            <Link href={"/"} className="back-button">
+                ← Retour à la liste    
             </Link>
             <section>
                 <h1>{defineSpecies(data.animal.species)}{data.animal.name}</h1>
@@ -25,9 +25,9 @@ export default async function AnimalDetail({ params }) {
                 </ul>
             </section>
             <section>
-                <div className='owner-card'>
                     <h2>👤 Propriétaire</h2>
-                    <p>🧑‍🦱 {data.owner.first_name} {data.owner.last_name}</p>
+                <div className='owner-card gradient'>
+                    <h2>{data.owner.first_name} {data.owner.last_name}</h2>
                     <p>📞 {data.owner.phone}</p>
                     <p>📧 {data.owner.email}</p>
                     <p>📍 {data.owner.address}</p>
