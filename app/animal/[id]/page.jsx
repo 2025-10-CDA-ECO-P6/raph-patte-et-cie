@@ -26,7 +26,7 @@ export default async function AnimalDetail({ params }) {
             </section>
             <section>
                     <h2>👤 Propriétaire</h2>
-                <div className='owner-card gradient'>
+                <div className='inside-card gradient'>
                     <h2>{data.owner.first_name} {data.owner.last_name}</h2>
                     <p>📞 {data.owner.phone}</p>
                     <p>📧 {data.owner.email}</p>

@@ -134,7 +134,7 @@
       "reason": "Problème de peau",
       "diagnosis": "Dermatite allergique",
       "observations": "Prescription d'un traitement antihistaminique. Revoir dans 2 semaines.",
-      "visit_weight": 7.1,
+      "visit_weight": 3.1,
       "animal_id": 2,
       "vet_id": 3
     },
@@ -144,7 +144,7 @@
       "reason": "Suivi dermatite",
       "diagnosis": "Amélioration notable",
       "observations": "Peau en meilleure condition. Continuer le traitement encore 1 semaine.",
-      "visit_weight": 7.2,
+      "visit_weight": 3.2,
       "animal_id": 2,
       "vet_id": 3
     },
@@ -154,7 +154,7 @@
       "reason": "Problèmes respiratoires",
       "diagnosis": "Syndrome brachycéphale",
       "observations": "Typique de la race. Éviter les fortes chaleurs et l'exercice intense.",
-      "visit_weight": 12.5,
+      "visit_weight": 25.5,
       "animal_id": 3,
       "vet_id": 1
     },
@@ -164,7 +164,7 @@
       "reason": "Vaccination + contrôle",
       "diagnosis": "Bonne santé générale",
       "observations": "Respiration stable. Poids correct pour la race.",
-      "visit_weight": 12.8,
+      "visit_weight": 25.8,
       "animal_id": 3,
       "vet_id": 1
     },
@@ -174,7 +174,7 @@
       "reason": "Stérilisation",
       "diagnosis": "Opération réussie",
       "observations": "Chirurgie sans complications. Retrait des points dans 10 jours.",
-      "visit_weight": 4.6,
+      "visit_weight": 2.6,
       "animal_id": 4,
       "vet_id": 2
     },
@@ -184,7 +184,7 @@
       "reason": "Contrôle dentaire",
       "diagnosis": "Légère gingivite",
       "observations": "Détartrage recommandé dans les 6 mois. Brossage régulier conseillé.",
-      "visit_weight": 4.5,
+      "visit_weight": 2.5,
       "animal_id": 4,
       "vet_id": 1
     },
@@ -195,6 +195,56 @@
       "diagnosis": "Animal en bonne santé",
       "observations": "Examen complet OK. Vaccination myxomatose effectuée.",
       "visit_weight": 1.8,
+      "animal_id": 5,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 10,
+      "visit_date": "2025-11-22T14:30:00",
+      "reason": "Contrôle annuel + Vaccin",
+      "diagnosis": "",
+      "observations": "",
+      "visit_weight": null,
+      "animal_id": 1,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 11,
+      "visit_date": "2025-11-23T10:00:00",
+      "reason": "Suivi dermatite",
+      "diagnosis": "",
+      "observations": "",
+      "visit_weight": null,
+      "animal_id": 2,
+      "vet_id": 3
+    },
+    {
+      "visit_id": 12,
+      "visit_date": "2025-11-25T16:15:00",
+      "reason": "Contrôle respiratoire",
+      "diagnosis": "",
+      "observations": "",
+      "visit_weight": null,
+      "animal_id": 3,
+      "vet_id": 1
+    },
+    {
+      "visit_id": 13,
+      "visit_date": "2025-11-28T09:00:00",
+      "reason": "Détartrage",
+      "diagnosis": "",
+      "observations": "",
+      "visit_weight": null,
+      "animal_id": 4,
+      "vet_id": 2
+    },
+    {
+      "visit_id": 14,
+      "visit_date": "2025-12-05T11:30:00",
+      "reason": "Vaccination rappel",
+      "diagnosis": "",
+      "observations": "",
+      "visit_weight": null,
       "animal_id": 5,
       "vet_id": 1
     }
@@ -222,7 +272,7 @@
       "vaccine_id": 3,
       "vaccine_name": "Typhus + Coryza + Leucose",
       "injection_date": "2024-08-20",
-      "reminder_date": "2025-08-20",
+      "reminder_date": "2024-11-10",
       "batch_number": "FEL2024-TC-234",
       "animal_id": 2,
       "vet_id": 3
@@ -270,6 +320,24 @@
       "reminder_date": "2025-11-05",
       "batch_number": "RAB2024-VH-067",
       "animal_id": 5,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 9,
+      "vaccine_name": "Leucose féline",
+      "injection_date": "2023-10-15",
+      "reminder_date": "2024-10-15",
+      "batch_number": "FEL2023-LEU-045",
+      "animal_id": 2,
+      "vet_id": 1
+    },
+    {
+      "vaccine_id": 10,
+      "vaccine_name": "Rage",
+      "injection_date": "2024-11-01",
+      "reminder_date": "2025-12-10",
+      "batch_number": "RAB2024-FR-234",
+      "animal_id": 3,
       "vet_id": 1
     }
   ]
