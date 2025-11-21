@@ -9,7 +9,6 @@ export default async function HomePage() {
 
   return (
     <div id='home' className='container'>
-      <Link href={"/animal/1"}>Lien vers un détail d'Animal</Link>
       <section>
         <h1>Hello, Doctor!</h1>
         <div className='gradient-blue inside-card'>
@@ -36,8 +35,7 @@ export default async function HomePage() {
       <section className="upcoming-section">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="icon">📅</span>
-            Prochains rendez-vous
+            📅 Prochains rendez-vous
             <span className="section-badge gradient-blue">{data?.stats.upcomingVisitsCount}</span>
           </h2>
           <a href="/appointments" className="blue-link">Voir tout →</a>
@@ -89,8 +87,7 @@ export default async function HomePage() {
       <section className="upcoming-section">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="icon">💉</span>
-            Rappels vaccins
+            💉 Rappels vaccins
             <span className="section-badge gradient-blue">{data?.allVaccinesWithStatus.length}</span>
           </h2>
         </div>

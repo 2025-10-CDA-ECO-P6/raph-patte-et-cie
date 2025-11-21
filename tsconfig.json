@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/animalDetail.jsx"  ],
+, "components/animalDetail.jsx", "app/layout.jsx", "app/page.jsx"  ],
   "exclude": ["node_modules"]
 }
