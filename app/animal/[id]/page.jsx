@@ -15,8 +15,13 @@ export default async function AnimalDetail({ params }) {
                 ← Retour à la liste    
             </Link>
             <section>
-                <h1>{defineSpecies(data.animal.species)}{data.animal.name}</h1>
-                <p className='animal-breed'>{data.animal.breed} • {data.animal.sex == "M" ? "Mâle" : "Femelle"}</p>
+                <div className='section-info'>
+                    <div className='animal-avatar'>{defineSpecies(data.animal.species)}</div>
+                    <div>
+                        <h1>{data.animal.name}</h1>
+                        <p className='animal-details'>{data.animal.breed} • {data.animal.sex == "M" ? "Mâle" : "Femelle"}</p>
+                    </div>
+                </div>
                 <ul className='badges'>
                     <li className='badge badge-primary'>🎂 {calculateAge(data.animal.birth_date)}</li>
                     <li className='badge badge-secondary'>⚖️ {data.animal.weight}kg</li>
@@ -25,8 +30,8 @@ export default async function AnimalDetail({ params }) {
                 </ul>
             </section>
             <section>
-                    <h2>👤 Propriétaire</h2>
-                <div className='inside-card gradient'>
+                <h2>👤 Propriétaire</h2>
+                <div className='inside-card gradient-blue'>
                     <h2>{data.owner.first_name} {data.owner.last_name}</h2>
                     <p>📞 {data.owner.phone}</p>
                     <p>📧 {data.owner.email}</p>
@@ -41,7 +46,7 @@ export default async function AnimalDetail({ params }) {
             ) : (
                 <div className="list-card">
                 {data.visits.map(visit => (
-                    <div key={visit.visit_id} className="list-card-item">
+                    <div key={visit.visit_id} className="list-card-item animate-card border-left gradient-grey">
                     <p className="blue-title">{new Date(visit.visit_date).toLocaleDateString('fr-FR')}</p>
                     <h3 className='h3'>{visit.reason}</h3>
                     <p className="meta-text">Dr {visit.veterinarian.last_name} • {visit.visit_weight}kg</p>
@@ -63,7 +68,7 @@ export default async function AnimalDetail({ params }) {
             ) : (
                 <div className="list-card">
                 {data.vaccines.map(vaccine => (
-                    <div key={vaccine.vaccine_id} className="list-card-item">
+                    <div key={vaccine.vaccine_id} className="list-card-item animate-card border-left gradient-grey">
                     <p className="blue-title">{new Date(vaccine.injection_date).toLocaleDateString('fr-FR')}</p>
                     <h3 className='h3'>{vaccine.vaccine_name}</h3>
                     <p className="meta-text">Dr {vaccine.veterinarian.last_name}</p>

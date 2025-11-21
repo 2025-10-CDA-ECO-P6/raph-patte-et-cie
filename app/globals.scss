@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+$blue: #667eea;
+
 * {
   margin: 0;
   padding: 0;
@@ -30,11 +32,23 @@ body {
   margin: 0 auto;
 }
 
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
 /// General
 
-.gradient {
+.gradient-blue {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+}
+
+.gradient-grey {
+
+  background: linear-gradient(135deg, #f8f9fc 0%, #e1e3e9 100%);
 }
 
 h2 {
@@ -84,8 +98,9 @@ section,
   color: #161616;
   background-color: white;
   margin-block: 24px;
-  padding: 20px;
+  padding: 24px;
   border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .meta-text {
@@ -100,6 +115,57 @@ section,
   line-height: 1.6;
 }
 
+.animate-card {
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+.color-blue {
+  color: $blue;
+}
+
+.blue-link {
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    transform: translate(3px);
+  }
+  &, &:hover {
+    transition: all 0.3s;
+  }
+}
+
+/// background 
+
+.bg-green {
+  background: #f0fdf4;
+}
+.bg-red {
+  background: #fef2f2;
+}
+
+/// borders
+
+.border {
+  border: 2px solid;
+  border-color: $blue;
+}
+
+.border-left {
+  border-left: 4px solid $blue 
+}
+
+.border-red { border-left-color: #e53e3e; }
+.border-orange { border-left-color: #ecc94b; }
+.border-green { border-left-color: #48bb78; }
 
 /// badges 
 
@@ -115,6 +181,15 @@ section,
   font-size: 16px;
   font-weight: 600;
   background: #F6F6F6;
+
+  .badge-mini & {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+.badge .badge-icon {
+  font-size: 14px;
 }
 
 .badge-primary {
@@ -127,38 +202,73 @@ section,
   color: #6b46c1;
 }
 
+.badge-white {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 .badge-success {
   background: #e6ffe6;
   color: #00b300;
+}
+
+.badge-red {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #e53e3e;
+}
+
+.badge-orange {
+  background: #fffff0;
+  color: #b7791f;
+  border: 1px solid #ecc94b;
+}
+
+.badge-green {
+  background: #d1fae5;
+  color: #38a169;
+  border: 1px solid #48bb78;
 }
 
 // stats
 
 .stats {
   display: flex;
-  gap: 6px 12px;
+  gap: 12px 8px;
   flex-wrap: wrap;
+  padding-block: 20px;
 }
 
 .stat {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  padding: 10px 20px;
+  padding: 6px 24px;
   border-radius: 50px;
-  display: flex;
-  align-items: center;
   gap: 12px;
   white-space: nowrap;
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 14px;
+  font-size: 12px;
+  text-align: center;
 
-  span {
-    font-size: 24px;
-  }
   strong {
     font-size: 30px;
     display: block;
+    line-height: 32px;
+  }
+}
+
+
+/// Home
+
+#home {
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  .gradient {
+    background-color: transparent;
   }
 }
 
@@ -173,8 +283,16 @@ section,
   }
 }
 
-.animal-breed {
-  font-size: 16px;
+
+.animal-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.animal-details {
+  font-size: 14px;
   color: #ACA3A3;
   padding-bottom: 8px;
 }
@@ -186,15 +304,112 @@ section,
 
 .list-card-item {
   padding: 20px;
-  background: #f7fafc;
   border-radius: 15px;
   margin-bottom: 15px;
-  border-left: 4px solid #667eea;
-  transition: all 0.3s;
+}
 
-  &:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+
+
+/// sections
+
+
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.section-title .icon {
+  font-size: 24px;
+}
+
+.section-badge {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+
+.animal-avatar {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.visit-list {
+
+  .absolute {
+    top: 16px;
+    right: 16px;
   }
 }
+
+.section-info {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+/* ============================================
+   STATUTS VACCINS
+   ============================================ */
+
+/* Bordures par statut */
+
+/* Badges par statut */
+
+
+/* ============================================
+   INFOS VACCINS
+   ============================================ */
+
+.vaccine-info {
+  flex: 1;
+}
+
+.vaccine-name {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0 0 4px 0;
+}
+
+.vaccine-reminder {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 0;
+}
+
+
+
+
+
