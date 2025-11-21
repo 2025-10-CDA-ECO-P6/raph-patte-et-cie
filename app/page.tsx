@@ -52,33 +52,34 @@ export default async function HomePage() {
           <div className="visit-list">
             {data?.upcomingVisits.map(visit => (
               <div key={visit.visit_id} className="relative list-card-item animate-card border-left gradient-grey">
+                <Link href={`/animal/${visit.animal_id}`}>
+                  <div className="section-info">
+                    <div className="animal-avatar">
+                      {defineSpecies(visit.animal.species)}
+                    </div>
+                    <div>
+                      <h3 className="animal-name">{visit.animal.name}</h3>
+                      <p className="animal-details">
+                        {visit.animal.breed} • {visit.owner.first_name} {visit.owner.last_name}
+                      </p>
+                    </div>
+                  </div>
+                    
+                    <div className="badges badge-mini">
+                      <span className="badge badge-white">
+                        🩺 {visit.reason}
+                      </span>
+                      <span className="badge badge-white">
+                        ⚖️ {visit.animal.weight}kg
+                      </span>
+                    </div>
 
-                <div className="section-info">
-                  <div className="animal-avatar">
-                    {defineSpecies(visit.animal.species)}
-                  </div>
-                  <div>
-                    <h3 className="animal-name">{visit.animal.name}</h3>
-                    <p className="animal-details">
-                      {visit.animal.breed} • {visit.owner.first_name} {visit.owner.last_name}
-                    </p>
-                  </div>
-                </div>
-                  
-                  <div className="badges badge-mini">
-                    <span className="badge badge-white">
-                      🩺 {visit.reason}
-                    </span>
-                    <span className="badge badge-white">
-                      ⚖️ {visit.animal.weight}kg
+                  <div className="badges badge-mini absolute">
+                    <span className="badge border color-blue">
+                      {formatTime(visit.visit_date)} {getRelativeDay(visit.visit_date)}
                     </span>
                   </div>
-
-                <div className="badges badge-mini absolute">
-                  <span className="badge border color-blue">
-                    {formatTime(visit.visit_date)} {getRelativeDay(visit.visit_date)}
-                  </span>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -103,28 +104,30 @@ export default async function HomePage() {
                 key={vaccine.vaccine_id} 
                 className={`relative list-card-item animate-card border-left border-${status.status} bg-${status.status}`}
               >
-                <div className="section-info">
-                  <div className="animal-avatar">
-                    {defineSpecies(vaccine.animal.species)}
+                <Link href={`/animal/${vaccine.animal_id}`}>
+                  <div className="section-info">
+                    <div className="animal-avatar">
+                      {defineSpecies(vaccine.animal.species)}
+                    </div>
+                    <div className="vaccine-info">
+                      <h3 className="animal-name">{vaccine.animal.name}</h3>
+                      <p className="vaccine-name">{vaccine.vaccine_name}</p>
+                      <p className="animal-details">
+                        Rappel prévu le {new Date(vaccine.reminder_date).toLocaleDateString('fr-FR', {
+                          day: 'numeric',
+                          month: 'short',
+                          year: 'numeric'
+                        })}
+                      </p>
+                    </div>
                   </div>
-                  <div className="vaccine-info">
-                    <h3 className="animal-name">{vaccine.animal.name}</h3>
-                    <p className="vaccine-name">{vaccine.vaccine_name}</p>
-                    <p className="vaccine-reminder">
-                      Rappel prévu le {new Date(vaccine.reminder_date).toLocaleDateString('fr-FR', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric'
-                      })}
-                    </p>
-                  </div>
-                </div>
 
-                <div className="badges badge-mini absolute">
-                  <span className={`badge badge-${status.status}`}>
-                    {status.text}
-                  </span>
-                </div>
+                  <div className="badges badge-mini absolute">
+                    <span className={`badge badge-${status.status}`}>
+                      {status.text}
+                    </span>
+                  </div>
+                </Link>
               </div>
             );
           })}
